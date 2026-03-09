@@ -759,7 +759,7 @@ function determineModes(sc){
 function serializeSection(secNum){
   const sc=calcScores();
   const modes=determineModes(sc);
-  const base={case_id:caseId,section:`S${secNum}`,saved_at:new Date().toISOString(),email:d.email||"",client_name:d.clientName||"",nationality:d.nationality||"",gender:d.gender||"",age_group:d.ageGroup||"",visit_intention:d.visitIntention||"",lang:lang};
+  const base={case_id:caseId,section:`S${secNum}`,saved_at:new Date().toISOString(),email:d.email||"",client_name:d.clientName||"",source:"online",nationality:d.nationality||"",gender:d.gender||"",age_group:d.ageGroup||"",visit_intention:d.visitIntention||"",lang:lang};
   const sd={
     1:{after_wash_tight:d.afterWashTight??"",easily_red:d.easilyRed??"",wind_sting:d.windSting??"",product_sting:d.productSting??"",visible_vessel:d.visibleVessel??"",thin_score:sc.thin,top3_concerns:multiState.top3.join("|")},
     2:{dry_rough:d.dryRough??"",flaky_makeup:d.flakyMakeup??"",night_itch:d.nightItch??"",cream_dry_fast:d.creamDryFast??"",slow_recovery:d.slowRecovery??"",barrier_score:sc.barrier},
